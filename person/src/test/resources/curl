@@ -1,0 +1,33 @@
+# Add
+curl --location 'localhost:8080/person' \
+--header 'Content-Type: application/json' \
+--data-raw '{"name": "Sophia",
+ "age": 21,
+ "email": "sophia@email.com",
+ "gender": "female"
+}'
+
+
+curl --location 'localhost:8080/person' \
+--header 'Content-Type: application/json' \
+--data-raw '{"name": "Carlos",
+ "age": 58,
+ "email": "carlos_lucena@hotmail.com",
+ "gender": "male"
+}'
+
+curl --location 'localhost:8080/person' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "id": null,
+    "name": "John Doe",
+    "age": 35,
+    "email": "john.doe@test.com",
+    "gender": "male"
+}'
+
+# list all
+curl http://localhost:8080/person/all
+
+# list id
+curl http://localhost:8080/person/1
